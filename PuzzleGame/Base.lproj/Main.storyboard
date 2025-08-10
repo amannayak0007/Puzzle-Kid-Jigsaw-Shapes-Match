@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kEQ-tl-Fmx">
-    <device id="retina6_72" orientation="landscape" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24118.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kEQ-tl-Fmx">
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24059"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +14,7 @@
             <objects>
                 <viewController storyboardIdentifier="PuzzleGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QzE-0M-NyJ" customClass="PuzzleGameViewController" customModule="PuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9RM-YC-aHQ" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-jG-8pt">
@@ -55,11 +55,11 @@
                         <viewControllerLayoutGuide type="bottom" id="8cN-h2-Y1x"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uul-Gd-YbR">
-                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hB1-Hw-aCD">
-                                <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                                <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                                 <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="30" minimumInteritemSpacing="20" id="5yV-gH-Ugf">
                                     <size key="itemSize" width="200" height="311.5"/>
@@ -68,12 +68,12 @@
                                     <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fruitMainBG" id="Wb6-dh-jfu">
-                                    <rect key="frame" x="-59" y="0.0" width="932" height="430"/>
+                                    <rect key="frame" x="-59" y="-59" width="852" height="393"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PuzzleSectionCollectionViewCell" id="MzD-TM-qhk" customClass="PuzzleSectionCollectionViewCell" customModule="PuzzleGame" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="63.666666666666664" width="200" height="301.5"/>
+                                        <rect key="frame" x="0.0" y="-1.3333333333333333" width="200" height="301.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="301.5"/>
@@ -145,7 +145,7 @@
                         <viewControllerLayoutGuide type="bottom" id="L1i-fM-oS9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nRt-DU-T3o" userLabel="wrapperView">
-                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OwlShadow" translatesAutoresizingMaskIntoConstraints="NO" id="xoh-Jd-0ri" userLabel="chickenShadow">
@@ -228,7 +228,7 @@
                         <viewControllerLayoutGuide type="bottom" id="t53-Bq-NNg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zNA-IQ-wfW">
-                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="68j-bu-LpT" userLabel="wrapper">
@@ -314,7 +314,7 @@
                         <viewControllerLayoutGuide type="bottom" id="3yJ-V2-Lzx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dJc-HW-JcV">
-                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G4I-7d-YEB" userLabel="wrapper">
@@ -399,7 +399,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7Kj-US-YG2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gCI-hJ-reM">
-                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llH-QS-TxZ" userLabel="wrapper">
@@ -485,7 +485,7 @@
                         <viewControllerLayoutGuide type="bottom" id="51Z-fb-mHR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ock-Yu-7hC">
-                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kc5-IG-IGg" userLabel="wrapper">
@@ -571,7 +571,7 @@
                         <viewControllerLayoutGuide type="bottom" id="t0s-nT-GOb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KXW-v0-mS8" userLabel="wrapperView">
-                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ambulance_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="rGi-ss-0Jh" userLabel="chickenShadow">
@@ -654,26 +654,26 @@
                         <viewControllerLayoutGuide type="bottom" id="duN-xK-KQP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZhX-ZD-Qys">
-                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6WW-BE-QIj">
-                                <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                                <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Z52-de-ZIy">
-                                        <rect key="frame" x="0.0" y="0.0" width="932" height="215"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="852" height="196.66666666666666"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAm-Tk-bpY">
-                                                <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="284" height="196.66666666666666"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleShadow" translatesAutoresizingMaskIntoConstraints="NO" id="sPD-LN-1qc">
-                                                        <rect key="frame" x="74.666666666666671" y="33.666666666666671" width="161.33333333333331" height="147.66666666666663"/>
+                                                        <rect key="frame" x="68.333333333333329" y="31" width="147.33333333333337" height="134.66666666666666"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="sPD-LN-1qc" secondAttribute="height" multiplier="35:32" id="qKU-vJ-wVN"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0u-Rs-6tP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="196.66666666666666"/>
                                                         <connections>
                                                             <action selector="didTapShape:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="4ra-Fi-sRU"/>
                                                         </connections>
@@ -691,16 +691,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dva-zC-N4P">
-                                                <rect key="frame" x="310.66666666666663" y="0.0" width="310.66666666666663" height="215"/>
+                                                <rect key="frame" x="284" y="0.0" width="284" height="196.66666666666666"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devil" translatesAutoresizingMaskIntoConstraints="NO" id="qKO-qu-z3N">
-                                                        <rect key="frame" x="74.666666666666643" y="33.666666666666671" width="161.33333333333337" height="147.66666666666663"/>
+                                                        <rect key="frame" x="68.333333333333329" y="31" width="147.33333333333337" height="134.66666666666666"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="qKO-qu-z3N" secondAttribute="height" multiplier="35:32" id="iR8-Y6-wlq"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIw-ca-cgm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="196.66666666666666"/>
                                                         <connections>
                                                             <action selector="didTapEmoji:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="V4b-1N-wNs"/>
                                                         </connections>
@@ -718,16 +718,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIP-LO-fre">
-                                                <rect key="frame" x="621.33333333333337" y="0.0" width="310.66666666666663" height="215"/>
+                                                <rect key="frame" x="568" y="0.0" width="284" height="196.66666666666666"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus" translatesAutoresizingMaskIntoConstraints="NO" id="WBd-fi-284">
-                                                        <rect key="frame" x="74.666666666666643" y="33.666666666666671" width="161.33333333333337" height="147.66666666666663"/>
+                                                        <rect key="frame" x="68.333333333333385" y="31" width="147.33333333333337" height="134.66666666666666"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="WBd-fi-284" secondAttribute="height" multiplier="35:32" id="IeG-mX-Bhb"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKe-4A-7VP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="196.66666666666666"/>
                                                         <connections>
                                                             <action selector="didTapPlant:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="X1u-76-FdL"/>
                                                         </connections>
@@ -747,19 +747,19 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kbW-pa-rw9">
-                                        <rect key="frame" x="0.0" y="215" width="932" height="215"/>
+                                        <rect key="frame" x="0.0" y="196.66666666666663" width="852" height="196.33333333333337"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiy-x6-CYN">
-                                                <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="284" height="196.33333333333334"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orange" translatesAutoresizingMaskIntoConstraints="NO" id="Kbb-ff-De1">
-                                                        <rect key="frame" x="74.666666666666671" y="33.666666666666657" width="161.33333333333331" height="147.66666666666666"/>
+                                                        <rect key="frame" x="68.333333333333329" y="30.666666666666686" width="147.33333333333337" height="134.66666666666666"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="Kbb-ff-De1" secondAttribute="height" multiplier="35:32" id="t8e-i7-8gk"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFO-9K-a7H">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="196.33333333333334"/>
                                                         <connections>
                                                             <action selector="fruitsImageTapped:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="cIF-Gt-Rpf"/>
                                                         </connections>
@@ -777,16 +777,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAp-3Q-dbA">
-                                                <rect key="frame" x="310.66666666666663" y="0.0" width="310.66666666666663" height="215"/>
+                                                <rect key="frame" x="284" y="0.0" width="284" height="196.33333333333334"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Owl" translatesAutoresizingMaskIntoConstraints="NO" id="70C-iQ-rhJ">
-                                                        <rect key="frame" x="74.666666666666643" y="33.666666666666657" width="161.33333333333337" height="147.66666666666666"/>
+                                                        <rect key="frame" x="68.333333333333329" y="30.666666666666686" width="147.33333333333337" height="134.66666666666666"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="70C-iQ-rhJ" secondAttribute="height" multiplier="35:32" id="e1g-1n-7rB"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3f8-R5-QiF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="196.33333333333334"/>
                                                         <connections>
                                                             <action selector="animalsImageTapped:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="Va2-px-xMd"/>
                                                         </connections>
@@ -804,16 +804,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olD-v4-bX6">
-                                                <rect key="frame" x="621.33333333333337" y="0.0" width="310.66666666666663" height="215"/>
+                                                <rect key="frame" x="568" y="0.0" width="284" height="196.33333333333334"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle" translatesAutoresizingMaskIntoConstraints="NO" id="89C-cB-Dwe">
-                                                        <rect key="frame" x="74.666666666666643" y="33.666666666666657" width="161.33333333333337" height="147.66666666666666"/>
+                                                        <rect key="frame" x="68.333333333333385" y="30.666666666666686" width="147.33333333333337" height="134.66666666666666"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="89C-cB-Dwe" secondAttribute="height" multiplier="35:32" id="Znc-I8-rig"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCV-0B-dTF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="284" height="196.33333333333334"/>
                                                         <connections>
                                                             <action selector="didTapVehicle:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="MEP-6i-rK2"/>
                                                         </connections>
@@ -835,7 +835,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6n-p6-waY">
-                                <rect key="frame" x="29.999999999999996" y="29.999999999999996" width="61.666666666666657" height="61.666666666666657"/>
+                                <rect key="frame" x="29.999999999999996" y="89" width="61.666666666666657" height="61.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="61.670000000000002" id="Udv-yf-J2f">
                                         <variation key="heightClass=regular-widthClass=regular" constant="80"/>
@@ -923,10 +923,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
