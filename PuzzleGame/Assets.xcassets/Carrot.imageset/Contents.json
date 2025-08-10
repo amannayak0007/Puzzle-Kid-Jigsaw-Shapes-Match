@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "027-carrot.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

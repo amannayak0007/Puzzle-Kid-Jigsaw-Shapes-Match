@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8925540F2B24A1A5005B2AFA /* PuzzleSectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8925540E2B24A1A5005B2AFA /* PuzzleSectionVC.swift */; };
+		892554292B24A301005B2AFA /* VoiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892554282B24A301005B2AFA /* VoiceManager.swift */; };
+		896FF2D42B22240500C2546B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2D32B22240500C2546B /* AppDelegate.swift */; };
+		896FF2D62B22240500C2546B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2D52B22240500C2546B /* SceneDelegate.swift */; };
+		896FF2DB2B22240500C2546B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2D92B22240500C2546B /* Main.storyboard */; };
+		896FF2DD2B22240600C2546B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2DC2B22240600C2546B /* Assets.xcassets */; };
+		896FF2E02B22240600C2546B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2DE2B22240600C2546B /* LaunchScreen.storyboard */; };
+		896FF30A2B22241100C2546B /* 112340-celebration-balloon-confetti-animation (1).json in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2E82B22241100C2546B /* 112340-celebration-balloon-confetti-animation (1).json */; };
+		896FF30B2B22241100C2546B /* PuzzleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2E92B22241100C2546B /* PuzzleGameViewController.swift */; };
+		896FF30C2B22241100C2546B /* PuzzleScene3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2EB2B22241100C2546B /* PuzzleScene3.swift */; };
+		896FF30D2B22241100C2546B /* PuzzleScene1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2EC2B22241100C2546B /* PuzzleScene1.swift */; };
+		896FF30E2B22241100C2546B /* PuzzleScene5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2ED2B22241100C2546B /* PuzzleScene5.swift */; };
+		896FF30F2B22241100C2546B /* PuzzleScene10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2EE2B22241100C2546B /* PuzzleScene10.swift */; };
+		896FF3102B22241100C2546B /* PuzzleScene7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2EF2B22241100C2546B /* PuzzleScene7.swift */; };
+		896FF3112B22241100C2546B /* PuzzleScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2F02B22241100C2546B /* PuzzleScene2.swift */; };
+		896FF3122B22241100C2546B /* PuzzleScene6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2F12B22241100C2546B /* PuzzleScene6.swift */; };
+		896FF3132B22241100C2546B /* PuzzleScene4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2F22B22241100C2546B /* PuzzleScene4.swift */; };
+		896FF3142B22241100C2546B /* PuzzleScene8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2F32B22241100C2546B /* PuzzleScene8.swift */; };
+		896FF3152B22241100C2546B /* PuzzleScene9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF2F42B22241100C2546B /* PuzzleScene9.swift */; };
+		896FF3162B22241100C2546B /* PuzzleGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2F52B22241100C2546B /* PuzzleGameScene.sks */; };
+		896FF3172B22241100C2546B /* police_car.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2F72B22241100C2546B /* police_car.mp3 */; };
+		896FF3182B22241100C2546B /* bulldozer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2F82B22241100C2546B /* bulldozer.mp3 */; };
+		896FF3192B22241100C2546B /* excavator.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2F92B22241100C2546B /* excavator.mp3 */; };
+		896FF31A2B22241100C2546B /* road_roller.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2FA2B22241100C2546B /* road_roller.mp3 */; };
+		896FF31B2B22241100C2546B /* wrong_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2FB2B22241100C2546B /* wrong_sound.wav */; };
+		896FF31C2B22241100C2546B /* cement_mixer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2FC2B22241100C2546B /* cement_mixer.mp3 */; };
+		896FF31D2B22241100C2546B /* fire_truck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2FD2B22241100C2546B /* fire_truck.mp3 */; };
+		896FF31E2B22241100C2546B /* taxi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2FE2B22241100C2546B /* taxi.mp3 */; };
+		896FF31F2B22241100C2546B /* correct_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896FF2FF2B22241100C2546B /* correct_sound.mp3 */; };
+		896FF3202B22241100C2546B /* crane_car.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896FF3002B22241100C2546B /* crane_car.mp3 */; };
+		896FF3212B22241100C2546B /* ambulance.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896FF3012B22241100C2546B /* ambulance.mp3 */; };
+		896FF3222B22241100C2546B /* garbage_truck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 896FF3022B22241100C2546B /* garbage_truck.mp3 */; };
+		896FF3232B22241100C2546B /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF3042B22241100C2546B /* SoundPlayer.swift */; };
+		896FF3242B22241100C2546B /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF3052B22241100C2546B /* Extenstions.swift */; };
+		896FF3252B22241100C2546B /* PuzzleGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF3062B22241100C2546B /* PuzzleGameScene.swift */; };
+		896FF3262B22241100C2546B /* transition.json in Resources */ = {isa = PBXBuildFile; fileRef = 896FF3072B22241100C2546B /* transition.json */; };
+		896FF3272B22241100C2546B /* HomeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF3082B22241100C2546B /* HomeScene.swift */; };
+		896FF3282B22241100C2546B /* 126684-drawing-and-coloring-icon.json in Resources */ = {isa = PBXBuildFile; fileRef = 896FF3092B22241100C2546B /* 126684-drawing-and-coloring-icon.json */; };
+		896FF32E2B22255600C2546B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF32D2B22255600C2546B /* Extensions.swift */; };
+		896FF3302B2225A700C2546B /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FF32F2B2225A700C2546B /* SoundManager.swift */; };
+		897FB6B92B29DB3300B697F5 /* AnimalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897FB6B22B29DB3300B697F5 /* AnimalsViewController.swift */; };
+		897FB6BA2B29DB3300B697F5 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897FB6B32B29DB3300B697F5 /* ChoiceViewController.swift */; };
+		897FB6BB2B29DB3300B697F5 /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897FB6B42B29DB3300B697F5 /* PlantViewController.swift */; };
+		897FB6BC2B29DB3300B697F5 /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897FB6B52B29DB3300B697F5 /* EmojiViewController.swift */; };
+		897FB6BD2B29DB3300B697F5 /* FruitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897FB6B62B29DB3300B697F5 /* FruitsViewController.swift */; };
+		897FB6BE2B29DB3300B697F5 /* ShapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897FB6B72B29DB3300B697F5 /* ShapeViewController.swift */; };
+		897FB6BF2B29DB3300B697F5 /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897FB6B82B29DB3300B697F5 /* VehiclesViewController.swift */; };
+		897FB6C12B29DBA000B697F5 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897FB6C02B29DBA000B697F5 /* DeviceType.swift */; };
+		B633308AD5379CE81239B24A /* Pods_PuzzleGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 311BDE549F2F49E24CC3791A /* Pods_PuzzleGame.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		311BDE549F2F49E24CC3791A /* Pods_PuzzleGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PuzzleGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C456FCD0EC027D48C8AD126 /* Pods-PuzzleGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuzzleGame.debug.xcconfig"; path = "Target Support Files/Pods-PuzzleGame/Pods-PuzzleGame.debug.xcconfig"; sourceTree = "<group>"; };
+		8925540E2B24A1A5005B2AFA /* PuzzleSectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleSectionVC.swift; sourceTree = "<group>"; };
+		892554282B24A301005B2AFA /* VoiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceManager.swift; sourceTree = "<group>"; };
+		896FF2D02B22240500C2546B /* PuzzleGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuzzleGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		896FF2D32B22240500C2546B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		896FF2D52B22240500C2546B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		896FF2DA2B22240500C2546B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		896FF2DC2B22240600C2546B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		896FF2DF2B22240600C2546B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		896FF2E12B22240600C2546B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		896FF2E82B22241100C2546B /* 112340-celebration-balloon-confetti-animation (1).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "112340-celebration-balloon-confetti-animation (1).json"; sourceTree = "<group>"; };
+		896FF2E92B22241100C2546B /* PuzzleGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleGameViewController.swift; sourceTree = "<group>"; };
+		896FF2EB2B22241100C2546B /* PuzzleScene3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleScene3.swift; sourceTree = "<group>"; };
+		896FF2EC2B22241100C2546B /* PuzzleScene1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleScene1.swift; sourceTree = "<group>"; };
+		896FF2ED2B22241100C2546B /* PuzzleScene5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleScene5.swift; sourceTree = "<group>"; };
+		896FF2EE2B22241100C2546B /* PuzzleScene10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleScene10.swift; sourceTree = "<group>"; };
+		896FF2EF2B22241100C2546B /* PuzzleScene7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleScene7.swift; sourceTree = "<group>"; };
+		896FF2F02B22241100C2546B /* PuzzleScene2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleScene2.swift; sourceTree = "<group>"; };
+		896FF2F12B22241100C2546B /* PuzzleScene6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleScene6.swift; sourceTree = "<group>"; };
+		896FF2F22B22241100C2546B /* PuzzleScene4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleScene4.swift; sourceTree = "<group>"; };
+		896FF2F32B22241100C2546B /* PuzzleScene8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleScene8.swift; sourceTree = "<group>"; };
+		896FF2F42B22241100C2546B /* PuzzleScene9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleScene9.swift; sourceTree = "<group>"; };
+		896FF2F52B22241100C2546B /* PuzzleGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PuzzleGameScene.sks; sourceTree = "<group>"; };
+		896FF2F72B22241100C2546B /* police_car.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = police_car.mp3; sourceTree = "<group>"; };
+		896FF2F82B22241100C2546B /* bulldozer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bulldozer.mp3; sourceTree = "<group>"; };
+		896FF2F92B22241100C2546B /* excavator.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = excavator.mp3; sourceTree = "<group>"; };
+		896FF2FA2B22241100C2546B /* road_roller.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = road_roller.mp3; sourceTree = "<group>"; };
+		896FF2FB2B22241100C2546B /* wrong_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong_sound.wav; sourceTree = "<group>"; };
+		896FF2FC2B22241100C2546B /* cement_mixer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cement_mixer.mp3; sourceTree = "<group>"; };
+		896FF2FD2B22241100C2546B /* fire_truck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fire_truck.mp3; sourceTree = "<group>"; };
+		896FF2FE2B22241100C2546B /* taxi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = taxi.mp3; sourceTree = "<group>"; };
+		896FF2FF2B22241100C2546B /* correct_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct_sound.mp3; sourceTree = "<group>"; };
+		896FF3002B22241100C2546B /* crane_car.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crane_car.mp3; sourceTree = "<group>"; };
+		896FF3012B22241100C2546B /* ambulance.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ambulance.mp3; sourceTree = "<group>"; };
+		896FF3022B22241100C2546B /* garbage_truck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = garbage_truck.mp3; sourceTree = "<group>"; };
+		896FF3042B22241100C2546B /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		896FF3052B22241100C2546B /* Extenstions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
+		896FF3062B22241100C2546B /* PuzzleGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleGameScene.swift; sourceTree = "<group>"; };
+		896FF3072B22241100C2546B /* transition.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transition.json; sourceTree = "<group>"; };
+		896FF3082B22241100C2546B /* HomeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeScene.swift; sourceTree = "<group>"; };
+		896FF3092B22241100C2546B /* 126684-drawing-and-coloring-icon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "126684-drawing-and-coloring-icon.json"; sourceTree = "<group>"; };
+		896FF32D2B22255600C2546B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Puzzle/Extensions.swift; sourceTree = "<group>"; };
+		896FF32F2B2225A700C2546B /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		897FB6B22B29DB3300B697F5 /* AnimalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsViewController.swift; sourceTree = "<group>"; };
+		897FB6B32B29DB3300B697F5 /* ChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
+		897FB6B42B29DB3300B697F5 /* PlantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantViewController.swift; sourceTree = "<group>"; };
+		897FB6B52B29DB3300B697F5 /* EmojiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
+		897FB6B62B29DB3300B697F5 /* FruitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitsViewController.swift; sourceTree = "<group>"; };
+		897FB6B72B29DB3300B697F5 /* ShapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeViewController.swift; sourceTree = "<group>"; };
+		897FB6B82B29DB3300B697F5 /* VehiclesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
+		897FB6C02B29DBA000B697F5 /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		897FB6C22B29E40400B697F5 /* PuzzleGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PuzzleGame.entitlements; sourceTree = "<group>"; };
+		DE6C29272854BD99E2483BE8 /* Pods-PuzzleGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PuzzleGame.release.xcconfig"; path = "Target Support Files/Pods-PuzzleGame/Pods-PuzzleGame.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		896FF2CD2B22240500C2546B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B633308AD5379CE81239B24A /* Pods_PuzzleGame.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1287AA6EF7174FBFB0EBD5EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				311BDE549F2F49E24CC3791A /* Pods_PuzzleGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6AB3AEAF4BA6339B51B34807 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C456FCD0EC027D48C8AD126 /* Pods-PuzzleGame.debug.xcconfig */,
+				DE6C29272854BD99E2483BE8 /* Pods-PuzzleGame.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		896FF2C72B22240500C2546B = {
+			isa = PBXGroup;
+			children = (
+				896FF2D22B22240500C2546B /* PuzzleGame */,
+				896FF2D12B22240500C2546B /* Products */,
+				6AB3AEAF4BA6339B51B34807 /* Pods */,
+				1287AA6EF7174FBFB0EBD5EE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		896FF2D12B22240500C2546B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				896FF2D02B22240500C2546B /* PuzzleGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		896FF2D22B22240500C2546B /* PuzzleGame */ = {
+			isa = PBXGroup;
+			children = (
+				897FB6C22B29E40400B697F5 /* PuzzleGame.entitlements */,
+				897FB6C02B29DBA000B697F5 /* DeviceType.swift */,
+				892554282B24A301005B2AFA /* VoiceManager.swift */,
+				897FB6B12B29DB3300B697F5 /* ShapeMatch */,
+				896FF2E72B22241100C2546B /* Puzzle */,
+				896FF2D32B22240500C2546B /* AppDelegate.swift */,
+				896FF2D52B22240500C2546B /* SceneDelegate.swift */,
+				896FF2D92B22240500C2546B /* Main.storyboard */,
+				896FF2DC2B22240600C2546B /* Assets.xcassets */,
+				896FF32F2B2225A700C2546B /* SoundManager.swift */,
+				896FF32D2B22255600C2546B /* Extensions.swift */,
+				896FF2DE2B22240600C2546B /* LaunchScreen.storyboard */,
+				896FF2E12B22240600C2546B /* Info.plist */,
+			);
+			path = PuzzleGame;
+			sourceTree = "<group>";
+		};
+		896FF2E72B22241100C2546B /* Puzzle */ = {
+			isa = PBXGroup;
+			children = (
+				896FF2E82B22241100C2546B /* 112340-celebration-balloon-confetti-animation (1).json */,
+				8925540E2B24A1A5005B2AFA /* PuzzleSectionVC.swift */,
+				896FF2E92B22241100C2546B /* PuzzleGameViewController.swift */,
+				896FF2EA2B22241100C2546B /* PuzzleScene */,
+				896FF2F52B22241100C2546B /* PuzzleGameScene.sks */,
+				896FF2F62B22241100C2546B /* Sound */,
+				896FF3032B22241100C2546B /* Helper */,
+				896FF3062B22241100C2546B /* PuzzleGameScene.swift */,
+				896FF3072B22241100C2546B /* transition.json */,
+				896FF3082B22241100C2546B /* HomeScene.swift */,
+				896FF3092B22241100C2546B /* 126684-drawing-and-coloring-icon.json */,
+			);
+			path = Puzzle;
+			sourceTree = "<group>";
+		};
+		896FF2EA2B22241100C2546B /* PuzzleScene */ = {
+			isa = PBXGroup;
+			children = (
+				896FF2EB2B22241100C2546B /* PuzzleScene3.swift */,
+				896FF2EC2B22241100C2546B /* PuzzleScene1.swift */,
+				896FF2ED2B22241100C2546B /* PuzzleScene5.swift */,
+				896FF2EE2B22241100C2546B /* PuzzleScene10.swift */,
+				896FF2EF2B22241100C2546B /* PuzzleScene7.swift */,
+				896FF2F02B22241100C2546B /* PuzzleScene2.swift */,
+				896FF2F12B22241100C2546B /* PuzzleScene6.swift */,
+				896FF2F22B22241100C2546B /* PuzzleScene4.swift */,
+				896FF2F32B22241100C2546B /* PuzzleScene8.swift */,
+				896FF2F42B22241100C2546B /* PuzzleScene9.swift */,
+			);
+			path = PuzzleScene;
+			sourceTree = "<group>";
+		};
+		896FF2F62B22241100C2546B /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				896FF2F72B22241100C2546B /* police_car.mp3 */,
+				896FF2F82B22241100C2546B /* bulldozer.mp3 */,
+				896FF2F92B22241100C2546B /* excavator.mp3 */,
+				896FF2FA2B22241100C2546B /* road_roller.mp3 */,
+				896FF2FB2B22241100C2546B /* wrong_sound.wav */,
+				896FF2FC2B22241100C2546B /* cement_mixer.mp3 */,
+				896FF2FD2B22241100C2546B /* fire_truck.mp3 */,
+				896FF2FE2B22241100C2546B /* taxi.mp3 */,
+				896FF2FF2B22241100C2546B /* correct_sound.mp3 */,
+				896FF3002B22241100C2546B /* crane_car.mp3 */,
+				896FF3012B22241100C2546B /* ambulance.mp3 */,
+				896FF3022B22241100C2546B /* garbage_truck.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		896FF3032B22241100C2546B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				896FF3042B22241100C2546B /* SoundPlayer.swift */,
+				896FF3052B22241100C2546B /* Extenstions.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		897FB6B12B29DB3300B697F5 /* ShapeMatch */ = {
+			isa = PBXGroup;
+			children = (
+				897FB6B22B29DB3300B697F5 /* AnimalsViewController.swift */,
+				897FB6B32B29DB3300B697F5 /* ChoiceViewController.swift */,
+				897FB6B42B29DB3300B697F5 /* PlantViewController.swift */,
+				897FB6B52B29DB3300B697F5 /* EmojiViewController.swift */,
+				897FB6B62B29DB3300B697F5 /* FruitsViewController.swift */,
+				897FB6B72B29DB3300B697F5 /* ShapeViewController.swift */,
+				897FB6B82B29DB3300B697F5 /* VehiclesViewController.swift */,
+			);
+			path = ShapeMatch;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		896FF2CF2B22240500C2546B /* PuzzleGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 896FF2E42B22240600C2546B /* Build configuration list for PBXNativeTarget "PuzzleGame" */;
+			buildPhases = (
+				986CAC9A35F2ADE6BF5C2DD9 /* [CP] Check Pods Manifest.lock */,
+				896FF2CC2B22240500C2546B /* Sources */,
+				896FF2CD2B22240500C2546B /* Frameworks */,
+				896FF2CE2B22240500C2546B /* Resources */,
+				7D8E1BF160CC7B186A829761 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PuzzleGame;
+			productName = PuzzleGame;
+			productReference = 896FF2D02B22240500C2546B /* PuzzleGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		896FF2C82B22240500C2546B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					896FF2CF2B22240500C2546B = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 896FF2CB2B22240500C2546B /* Build configuration list for PBXProject "PuzzleGame" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 896FF2C72B22240500C2546B;
+			productRefGroup = 896FF2D12B22240500C2546B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				896FF2CF2B22240500C2546B /* PuzzleGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		896FF2CE2B22240500C2546B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				896FF3262B22241100C2546B /* transition.json in Resources */,
+				896FF3192B22241100C2546B /* excavator.mp3 in Resources */,
+				896FF2E02B22240600C2546B /* LaunchScreen.storyboard in Resources */,
+				896FF31E2B22241100C2546B /* taxi.mp3 in Resources */,
+				896FF3282B22241100C2546B /* 126684-drawing-and-coloring-icon.json in Resources */,
+				896FF3212B22241100C2546B /* ambulance.mp3 in Resources */,
+				896FF31D2B22241100C2546B /* fire_truck.mp3 in Resources */,
+				896FF31A2B22241100C2546B /* road_roller.mp3 in Resources */,
+				896FF2DD2B22240600C2546B /* Assets.xcassets in Resources */,
+				896FF31B2B22241100C2546B /* wrong_sound.wav in Resources */,
+				896FF31F2B22241100C2546B /* correct_sound.mp3 in Resources */,
+				896FF30A2B22241100C2546B /* 112340-celebration-balloon-confetti-animation (1).json in Resources */,
+				896FF3202B22241100C2546B /* crane_car.mp3 in Resources */,
+				896FF3222B22241100C2546B /* garbage_truck.mp3 in Resources */,
+				896FF3162B22241100C2546B /* PuzzleGameScene.sks in Resources */,
+				896FF2DB2B22240500C2546B /* Main.storyboard in Resources */,
+				896FF31C2B22241100C2546B /* cement_mixer.mp3 in Resources */,
+				896FF3182B22241100C2546B /* bulldozer.mp3 in Resources */,
+				896FF3172B22241100C2546B /* police_car.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D8E1BF160CC7B186A829761 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PuzzleGame/Pods-PuzzleGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PuzzleGame/Pods-PuzzleGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PuzzleGame/Pods-PuzzleGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		986CAC9A35F2ADE6BF5C2DD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PuzzleGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		896FF2CC2B22240500C2546B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				896FF3242B22241100C2546B /* Extenstions.swift in Sources */,
+				897FB6BB2B29DB3300B697F5 /* PlantViewController.swift in Sources */,
+				896FF3122B22241100C2546B /* PuzzleScene6.swift in Sources */,
+				897FB6B92B29DB3300B697F5 /* AnimalsViewController.swift in Sources */,
+				897FB6BE2B29DB3300B697F5 /* ShapeViewController.swift in Sources */,
+				8925540F2B24A1A5005B2AFA /* PuzzleSectionVC.swift in Sources */,
+				897FB6BF2B29DB3300B697F5 /* VehiclesViewController.swift in Sources */,
+				892554292B24A301005B2AFA /* VoiceManager.swift in Sources */,
+				896FF30C2B22241100C2546B /* PuzzleScene3.swift in Sources */,
+				897FB6C12B29DBA000B697F5 /* DeviceType.swift in Sources */,
+				896FF3272B22241100C2546B /* HomeScene.swift in Sources */,
+				896FF30B2B22241100C2546B /* PuzzleGameViewController.swift in Sources */,
+				896FF3302B2225A700C2546B /* SoundManager.swift in Sources */,
+				896FF30E2B22241100C2546B /* PuzzleScene5.swift in Sources */,
+				896FF2D42B22240500C2546B /* AppDelegate.swift in Sources */,
+				896FF3112B22241100C2546B /* PuzzleScene2.swift in Sources */,
+				896FF30D2B22241100C2546B /* PuzzleScene1.swift in Sources */,
+				896FF3152B22241100C2546B /* PuzzleScene9.swift in Sources */,
+				897FB6BD2B29DB3300B697F5 /* FruitsViewController.swift in Sources */,
+				897FB6BA2B29DB3300B697F5 /* ChoiceViewController.swift in Sources */,
+				897FB6BC2B29DB3300B697F5 /* EmojiViewController.swift in Sources */,
+				896FF3102B22241100C2546B /* PuzzleScene7.swift in Sources */,
+				896FF3232B22241100C2546B /* SoundPlayer.swift in Sources */,
+				896FF32E2B22255600C2546B /* Extensions.swift in Sources */,
+				896FF3142B22241100C2546B /* PuzzleScene8.swift in Sources */,
+				896FF3132B22241100C2546B /* PuzzleScene4.swift in Sources */,
+				896FF2D62B22240500C2546B /* SceneDelegate.swift in Sources */,
+				896FF3252B22241100C2546B /* PuzzleGameScene.swift in Sources */,
+				896FF30F2B22241100C2546B /* PuzzleScene10.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		896FF2D92B22240500C2546B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				896FF2DA2B22240500C2546B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		896FF2DE2B22240600C2546B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				896FF2DF2B22240600C2546B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		896FF2E22B22240600C2546B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		896FF2E32B22240600C2546B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		896FF2E52B22240600C2546B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C456FCD0EC027D48C8AD126 /* Pods-PuzzleGame.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PuzzleGame/PuzzleGame.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UFWLT64PGT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PuzzleGame/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.kids-games";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PuzzleJigsaw.dh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		896FF2E62B22240600C2546B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE6C29272854BD99E2483BE8 /* Pods-PuzzleGame.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PuzzleGame/PuzzleGame.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UFWLT64PGT;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PuzzleGame/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.kids-games";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PuzzleJigsaw.dh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		896FF2CB2B22240500C2546B /* Build configuration list for PBXProject "PuzzleGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				896FF2E22B22240600C2546B /* Debug */,
+				896FF2E32B22240600C2546B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		896FF2E42B22240600C2546B /* Build configuration list for PBXNativeTarget "PuzzleGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				896FF2E52B22240600C2546B /* Debug */,
+				896FF2E62B22240600C2546B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 896FF2C82B22240500C2546B /* Project object */;
+}

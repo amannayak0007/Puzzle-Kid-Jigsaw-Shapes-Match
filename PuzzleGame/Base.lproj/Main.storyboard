@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kEQ-tl-Fmx">
+    <device id="retina6_72" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Puzzle Game View Controller-->
+        <scene sceneID="wvm-Fd-C6L">
+            <objects>
+                <viewController storyboardIdentifier="PuzzleGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QzE-0M-NyJ" customClass="PuzzleGameViewController" customModule="PuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9RM-YC-aHQ" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucR-jG-8pt">
+                                <rect key="frame" x="19.999999999999996" y="19.999999999999996" width="61.666666666666657" height="61.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61.670000000000002" id="JLw-9g-llm">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="ucR-jG-8pt" secondAttribute="height" multiplier="1:1" id="L31-Yy-Hll"/>
+                                    <constraint firstAttribute="width" secondItem="ucR-jG-8pt" secondAttribute="height" multiplier="1:1" id="Zg9-dw-IT1"/>
+                                    <constraint firstAttribute="width" secondItem="ucR-jG-8pt" secondAttribute="height" multiplier="1:1" id="dL8-w0-QGq"/>
+                                    <constraint firstAttribute="width" secondItem="ucR-jG-8pt" secondAttribute="height" multiplier="1:1" id="y5t-D0-Jqa"/>
+                                </constraints>
+                                <state key="normal" image="button-back"/>
+                                <connections>
+                                    <action selector="didTapBack:" destination="QzE-0M-NyJ" eventType="touchUpInside" id="17u-aV-ufL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fe6-MH-IyM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ucR-jG-8pt" firstAttribute="top" secondItem="9RM-YC-aHQ" secondAttribute="top" constant="20" id="cZw-P7-KA7"/>
+                            <constraint firstItem="ucR-jG-8pt" firstAttribute="leading" secondItem="9RM-YC-aHQ" secondAttribute="leading" constant="20" id="sz8-Aw-Bu0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kh9-hP-9Vb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2487.323943661972" y="5939.6946564885493"/>
+        </scene>
+        <!--Puzzle SectionVC-->
+        <scene sceneID="zho-KW-yCK">
+            <objects>
+                <viewController storyboardIdentifier="PuzzleSectionVC" id="aMK-5a-TcA" customClass="PuzzleSectionVC" customModule="PuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XJr-cI-bpI"/>
+                        <viewControllerLayoutGuide type="bottom" id="8cN-h2-Y1x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uul-Gd-YbR">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hB1-Hw-aCD">
+                                <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                                <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="30" minimumInteritemSpacing="20" id="5yV-gH-Ugf">
+                                    <size key="itemSize" width="200" height="311.5"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <imageView key="backgroundView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fruitMainBG" id="Wb6-dh-jfu">
+                                    <rect key="frame" x="-59" y="0.0" width="932" height="430"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PuzzleSectionCollectionViewCell" id="MzD-TM-qhk" customClass="PuzzleSectionCollectionViewCell" customModule="PuzzleGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="63.666666666666664" width="200" height="301.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="301.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musicGame" translatesAutoresizingMaskIntoConstraints="NO" id="4vi-bG-00j">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="361.66666666666669"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="4vi-bG-00j" firstAttribute="centerY" secondItem="MzD-TM-qhk" secondAttribute="centerY" constant="30" id="79p-yV-RaV"/>
+                                            <constraint firstItem="4vi-bG-00j" firstAttribute="top" secondItem="MzD-TM-qhk" secondAttribute="top" id="LEt-Wn-Vrc"/>
+                                            <constraint firstItem="4vi-bG-00j" firstAttribute="leading" secondItem="MzD-TM-qhk" secondAttribute="leading" id="Yey-8y-BJg"/>
+                                            <constraint firstAttribute="trailing" secondItem="4vi-bG-00j" secondAttribute="trailing" id="Zz1-wI-c4R"/>
+                                        </constraints>
+                                        <size key="customSize" width="200" height="301.5"/>
+                                        <connections>
+                                            <outlet property="sectionImage" destination="4vi-bG-00j" id="eon-fA-ZWv"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o81-TU-Cg5"/>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hB1-Hw-aCD" firstAttribute="top" secondItem="uul-Gd-YbR" secondAttribute="top" id="25K-Yh-qdd"/>
+                            <constraint firstItem="hB1-Hw-aCD" firstAttribute="leading" secondItem="uul-Gd-YbR" secondAttribute="leading" id="UsJ-ia-sdl"/>
+                            <constraint firstAttribute="trailing" secondItem="hB1-Hw-aCD" secondAttribute="trailing" id="buM-Yz-yh0"/>
+                            <constraint firstAttribute="bottom" secondItem="hB1-Hw-aCD" secondAttribute="bottom" id="ezX-D6-lzf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jx7-TX-eiu"/>
+                    <connections>
+                        <outlet property="collectionView" destination="hB1-Hw-aCD" id="2BM-xr-ouf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Vw-6R-9oM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1850.7042253521129" y="5939.6946564885493"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Efh-Oj-e7r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kEQ-tl-Fmx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wo1-4E-foK">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aMK-5a-TcA" kind="relationship" relationship="rootViewController" id="Igi-Ac-5Un"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHE-Bi-ssr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="5939.6946564885493"/>
+        </scene>
+        <!--Animals View Controller-->
+        <scene sceneID="QPR-1f-FGH">
+            <objects>
+                <viewController storyboardIdentifier="AnimalsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x1N-Dp-6iq" customClass="AnimalsViewController" customModule="PuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NIF-Q7-UiG"/>
+                        <viewControllerLayoutGuide type="bottom" id="L1i-fM-oS9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nRt-DU-T3o" userLabel="wrapperView">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OwlShadow" translatesAutoresizingMaskIntoConstraints="NO" id="xoh-Jd-0ri" userLabel="chickenShadow">
+                                <rect key="frame" x="773" y="21" width="71" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="monkeyShadow" translatesAutoresizingMaskIntoConstraints="NO" id="eU6-dB-Vnh" userLabel="crocodileShadow">
+                                <rect key="frame" x="768" y="122" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Owl" translatesAutoresizingMaskIntoConstraints="NO" id="hE9-hh-Yfx" userLabel="chickenImg">
+                                <rect key="frame" x="85" y="143" width="71" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="Monkey" translatesAutoresizingMaskIntoConstraints="NO" id="eSj-5T-QPX" userLabel="crocodileImg">
+                                <rect key="frame" x="82" y="246" width="76" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.94999998807907104" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rabbit" translatesAutoresizingMaskIntoConstraints="NO" id="Wsu-8S-VGT" userLabel="kualaImg">
+                                <rect key="frame" x="71" y="21" width="110" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Penguin" translatesAutoresizingMaskIntoConstraints="NO" id="vZY-Kp-QS1" userLabel="raccoonImg">
+                                <rect key="frame" x="80" y="337" width="78" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rebbitShadow" translatesAutoresizingMaskIntoConstraints="NO" id="NF8-tM-6H2" userLabel="kualaShadow">
+                                <rect key="frame" x="758" y="234" width="100" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PenguinShadow" translatesAutoresizingMaskIntoConstraints="NO" id="XFN-Ui-aMV" userLabel="raccoonShadow">
+                                <rect key="frame" x="762" y="322" width="78" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gj" translatesAutoresizingMaskIntoConstraints="NO" id="hae-mz-rEu">
+                                <rect key="frame" x="320" y="76" width="256" height="262"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crs-65-yf0">
+                                <rect key="frame" x="362" y="583" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button-back"/>
+                                <connections>
+                                    <action selector="didTapHome:" destination="6Uv-HQ-58Q" eventType="touchUpInside" id="Fp2-Ue-JFq"/>
+                                    <action selector="didTapHome:" destination="x1N-Dp-6iq" eventType="touchUpInside" id="lwd-fb-nca"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JqC-CF-ZCa"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="crs-65-yf0" id="khK-Z5-Xef"/>
+                        <outlet property="chicken" destination="hE9-hh-Yfx" id="cTn-WX-TyO"/>
+                        <outlet property="chickenShadow" destination="xoh-Jd-0ri" id="TPj-OR-exo"/>
+                        <outlet property="crocodile" destination="eSj-5T-QPX" id="dCC-Jp-Ghb"/>
+                        <outlet property="crocodileShadow" destination="eU6-dB-Vnh" id="faZ-du-Pv6"/>
+                        <outlet property="cuala" destination="Wsu-8S-VGT" id="Pfp-iF-CWX"/>
+                        <outlet property="cualaShadow" destination="NF8-tM-6H2" id="aFs-Oc-kXv"/>
+                        <outlet property="greatJobImg" destination="hae-mz-rEu" id="hXz-Bk-6p8"/>
+                        <outlet property="raccoon" destination="vZY-Kp-QS1" id="5FL-Xm-O07"/>
+                        <outlet property="raccoonShadow" destination="XFN-Ui-aMV" id="VHM-LN-tu7"/>
+                        <outlet property="wrapperView" destination="nRt-DU-T3o" id="IPn-oY-d9o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJK-BE-31i" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1333" y="2855"/>
+        </scene>
+        <!--Fruits View Controller-->
+        <scene sceneID="VVb-85-48V">
+            <objects>
+                <viewController storyboardIdentifier="FruitsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hSC-tc-xAo" customClass="FruitsViewController" customModule="PuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UwM-ih-Tpl"/>
+                        <viewControllerLayoutGuide type="bottom" id="t53-Bq-NNg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zNA-IQ-wfW">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="68j-bu-LpT" userLabel="wrapper">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Orange" translatesAutoresizingMaskIntoConstraints="NO" id="7Vh-jD-xMy" userLabel="avocadoImg">
+                                        <rect key="frame" x="74" y="22" width="81" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cherry" translatesAutoresizingMaskIntoConstraints="NO" id="Y7r-vA-j8f" userLabel="orangeImg">
+                                        <rect key="frame" x="74" y="130" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Carrot" translatesAutoresizingMaskIntoConstraints="NO" id="qwU-0R-MgO" userLabel="fruitImg">
+                                        <rect key="frame" x="74" y="230" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pineapple" translatesAutoresizingMaskIntoConstraints="NO" id="8S9-3X-Gk6" userLabel="berryImg">
+                                        <rect key="frame" x="79" y="319" width="71" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pineapple4Shadow" translatesAutoresizingMaskIntoConstraints="NO" id="ef4-4L-Gi7" userLabel="berryShadowImg">
+                                        <rect key="frame" x="795" y="201" width="71" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orangeShadow" translatesAutoresizingMaskIntoConstraints="NO" id="Ix5-WV-q4O" userLabel="avocadoShadowImg">
+                                        <rect key="frame" x="790" y="111" width="81" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carrotShadow" translatesAutoresizingMaskIntoConstraints="NO" id="Lsb-Pv-Fdn" userLabel="fruitShadowImg">
+                                        <rect key="frame" x="790" y="22" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cherryShadow" translatesAutoresizingMaskIntoConstraints="NO" id="O7g-IV-Ley" userLabel="orangeShadowImg">
+                                        <rect key="frame" x="795" y="314" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gj" translatesAutoresizingMaskIntoConstraints="NO" id="0ZE-2P-uZg">
+                                        <rect key="frame" x="309" y="67" width="256" height="262"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLe-xp-3u6">
+                                <rect key="frame" x="381" y="464" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button-back"/>
+                                <connections>
+                                    <action selector="didTapHome:" destination="6Uv-HQ-58Q" eventType="touchUpInside" id="Xdm-Vk-Hs1"/>
+                                    <action selector="didTapHome:" destination="hSC-tc-xAo" eventType="touchUpInside" id="wOc-7a-bcj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Inz-wC-FOh"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="avocadoImg" destination="7Vh-jD-xMy" id="PfX-n9-zda"/>
+                        <outlet property="avocadoShadowImg" destination="Ix5-WV-q4O" id="eUJ-Nc-rdl"/>
+                        <outlet property="backButton" destination="QLe-xp-3u6" id="9ZT-Tp-Vc1"/>
+                        <outlet property="berryImg" destination="8S9-3X-Gk6" id="SpW-JW-v4B"/>
+                        <outlet property="berryShadowImg" destination="ef4-4L-Gi7" id="VQU-qs-ZnC"/>
+                        <outlet property="fruitImg" destination="qwU-0R-MgO" id="viC-0i-hNb"/>
+                        <outlet property="fruitShadowImg" destination="Lsb-Pv-Fdn" id="DjK-zd-xpJ"/>
+                        <outlet property="greatJobImg" destination="0ZE-2P-uZg" id="diz-pS-sN1"/>
+                        <outlet property="orangeImg" destination="Y7r-vA-j8f" id="30X-kQ-hkp"/>
+                        <outlet property="orangeShadowImg" destination="O7g-IV-Ley" id="Fd3-aJ-6ND"/>
+                        <outlet property="wrapperView" destination="68j-bu-LpT" id="3ER-wl-fpz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zKy-OP-BG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332.5892857142856" y="3681.1594202898555"/>
+        </scene>
+        <!--Shape View Controller-->
+        <scene sceneID="JyL-Hd-ae5">
+            <objects>
+                <viewController storyboardIdentifier="ShapeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Uv-HQ-58Q" customClass="ShapeViewController" customModule="PuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Buh-MC-dfV"/>
+                        <viewControllerLayoutGuide type="bottom" id="3yJ-V2-Lzx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dJc-HW-JcV">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G4I-7d-YEB" userLabel="wrapper">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circleA" translatesAutoresizingMaskIntoConstraints="NO" id="4Za-7u-smV" userLabel="avocadoImg">
+                                        <rect key="frame" x="74" y="22" width="81" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="squareA" translatesAutoresizingMaskIntoConstraints="NO" id="ljC-GN-N2c" userLabel="orangeImg">
+                                        <rect key="frame" x="74" y="130" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="triangleA" translatesAutoresizingMaskIntoConstraints="NO" id="kzq-LK-iME" userLabel="fruitImg">
+                                        <rect key="frame" x="74" y="230" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="polygon" translatesAutoresizingMaskIntoConstraints="NO" id="AQa-kW-d6d" userLabel="berryImg">
+                                        <rect key="frame" x="79" y="319" width="71" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ploygonShadow" translatesAutoresizingMaskIntoConstraints="NO" id="gB3-Jg-kqg" userLabel="berryShadowImg">
+                                        <rect key="frame" x="795" y="201" width="71" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circleShadow" translatesAutoresizingMaskIntoConstraints="NO" id="pqW-X3-E6J" userLabel="avocadoShadowImg">
+                                        <rect key="frame" x="790" y="111" width="81" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="triangleShaow" translatesAutoresizingMaskIntoConstraints="NO" id="LxG-SZ-yi7" userLabel="fruitShadowImg">
+                                        <rect key="frame" x="790" y="22" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="squareShadow" translatesAutoresizingMaskIntoConstraints="NO" id="6TQ-di-wQl" userLabel="orangeShadowImg">
+                                        <rect key="frame" x="795" y="314" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gj" translatesAutoresizingMaskIntoConstraints="NO" id="PUs-tG-Udu">
+                                        <rect key="frame" x="309" y="67" width="256" height="262"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0044523999090000004" green="0.79986411329999996" blue="0.47765422499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBA-2a-ekX">
+                                <rect key="frame" x="310" y="495" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button-back"/>
+                                <connections>
+                                    <action selector="didTapHome:" destination="6Uv-HQ-58Q" eventType="touchUpInside" id="WO3-Cj-DL5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4YZ-Ep-Amj"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="avocadoImg" destination="4Za-7u-smV" id="GBD-Ex-NIg"/>
+                        <outlet property="avocadoShadowImg" destination="pqW-X3-E6J" id="enN-XB-D3n"/>
+                        <outlet property="backButton" destination="pBA-2a-ekX" id="6HP-qe-0hJ"/>
+                        <outlet property="berryImg" destination="AQa-kW-d6d" id="7iI-QZ-sMi"/>
+                        <outlet property="berryShadowImg" destination="gB3-Jg-kqg" id="85B-7h-JVV"/>
+                        <outlet property="fruitImg" destination="kzq-LK-iME" id="gL7-hT-JuI"/>
+                        <outlet property="fruitShadowImg" destination="LxG-SZ-yi7" id="PzC-Ba-s5G"/>
+                        <outlet property="greatJobImg" destination="PUs-tG-Udu" id="Qcw-et-lzh"/>
+                        <outlet property="orangeImg" destination="ljC-GN-N2c" id="1sM-Ev-41k"/>
+                        <outlet property="orangeShadowImg" destination="6TQ-di-wQl" id="ICu-wd-75V"/>
+                        <outlet property="wrapperView" destination="G4I-7d-YEB" id="a8h-cq-ENi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iih-AN-qO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331.9196428571429" y="4437.68115942029"/>
+        </scene>
+        <!--Emoji View Controller-->
+        <scene sceneID="tzm-XC-RNN">
+            <objects>
+                <viewController storyboardIdentifier="EmojiViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h6v-5j-QfP" customClass="EmojiViewController" customModule="PuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N1a-2H-lBx"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Kj-US-YG2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gCI-hJ-reM">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llH-QS-TxZ" userLabel="wrapper">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="429"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="devil" translatesAutoresizingMaskIntoConstraints="NO" id="yfZ-Lf-6AE" userLabel="avocadoImg">
+                                        <rect key="frame" x="74" y="22" width="81" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="starr" translatesAutoresizingMaskIntoConstraints="NO" id="cTp-bd-kj2" userLabel="orangeImg">
+                                        <rect key="frame" x="74" y="130" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heartA" translatesAutoresizingMaskIntoConstraints="NO" id="r2J-1V-Lfz" userLabel="fruitImg">
+                                        <rect key="frame" x="74" y="230" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poop" translatesAutoresizingMaskIntoConstraints="NO" id="AOw-3d-3JD" userLabel="berryImg">
+                                        <rect key="frame" x="79" y="319" width="71" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poopShadow" translatesAutoresizingMaskIntoConstraints="NO" id="Y4R-dT-UW7" userLabel="berryShadowImg">
+                                        <rect key="frame" x="795" y="201" width="71" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="devilShadow" translatesAutoresizingMaskIntoConstraints="NO" id="9nB-UL-TsB" userLabel="avocadoShadowImg">
+                                        <rect key="frame" x="790" y="111" width="81" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heartShadow" translatesAutoresizingMaskIntoConstraints="NO" id="jOa-ob-TZ0" userLabel="fruitShadowImg">
+                                        <rect key="frame" x="790" y="22" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="starShadow" translatesAutoresizingMaskIntoConstraints="NO" id="tCb-x5-SJp" userLabel="orangeShadowImg">
+                                        <rect key="frame" x="795" y="314" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gj" translatesAutoresizingMaskIntoConstraints="NO" id="yM3-4L-OtQ">
+                                        <rect key="frame" x="309" y="67" width="256" height="262"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.67450980390000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfN-Nt-naI">
+                                <rect key="frame" x="399" y="547" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button-back"/>
+                                <connections>
+                                    <action selector="didTapHome:" destination="h6v-5j-QfP" eventType="touchUpInside" id="yb5-pB-sV6"/>
+                                    <action selector="didTapHome:" destination="6Uv-HQ-58Q" eventType="touchUpInside" id="ylp-cZ-L0n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hIa-90-7Z9"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="avocadoImg" destination="yfZ-Lf-6AE" id="xPI-Ie-gZG"/>
+                        <outlet property="avocadoShadowImg" destination="9nB-UL-TsB" id="qn9-bj-hEh"/>
+                        <outlet property="backButton" destination="CfN-Nt-naI" id="grc-b7-z0S"/>
+                        <outlet property="berryImg" destination="AOw-3d-3JD" id="Srd-6O-c4v"/>
+                        <outlet property="berryShadowImg" destination="Y4R-dT-UW7" id="dJK-cu-uLg"/>
+                        <outlet property="fruitImg" destination="r2J-1V-Lfz" id="Lui-GC-QD3"/>
+                        <outlet property="fruitShadowImg" destination="jOa-ob-TZ0" id="5XI-Xw-Gr7"/>
+                        <outlet property="greatJobImg" destination="yM3-4L-OtQ" id="9QS-RK-7na"/>
+                        <outlet property="orangeImg" destination="cTp-bd-kj2" id="jmh-Kw-mWa"/>
+                        <outlet property="orangeShadowImg" destination="tCb-x5-SJp" id="LyV-Dw-Tde"/>
+                        <outlet property="wrapperView" destination="llH-QS-TxZ" id="s1R-nl-iW7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50e-n0-ahe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1331.9196428571429" y="5221.739130434783"/>
+        </scene>
+        <!--Plant View Controller-->
+        <scene sceneID="mab-0w-7Wc">
+            <objects>
+                <viewController storyboardIdentifier="PlantViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4J2-Rw-ote" customClass="PlantViewController" customModule="PuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yx7-6h-W9d"/>
+                        <viewControllerLayoutGuide type="bottom" id="51Z-fb-mHR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ock-Yu-7hC">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kc5-IG-IGg" userLabel="wrapper">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="429"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plant" translatesAutoresizingMaskIntoConstraints="NO" id="r1M-sd-Rkv" userLabel="avocadoImg">
+                                        <rect key="frame" x="74" y="22" width="81" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flower" translatesAutoresizingMaskIntoConstraints="NO" id="Q1V-qF-Cmy" userLabel="orangeImg">
+                                        <rect key="frame" x="74" y="130" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose" translatesAutoresizingMaskIntoConstraints="NO" id="sS5-i5-lLM" userLabel="fruitImg">
+                                        <rect key="frame" x="74" y="230" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cactus" translatesAutoresizingMaskIntoConstraints="NO" id="LeZ-af-vUF" userLabel="berryImg">
+                                        <rect key="frame" x="79" y="319" width="71" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rose_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="elC-hh-rfy" userLabel="berryShadowImg">
+                                        <rect key="frame" x="795" y="201" width="71" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flower_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="tcG-qJ-f1B" userLabel="avocadoShadowImg">
+                                        <rect key="frame" x="790" y="111" width="81" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plant_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="riE-0o-c4y" userLabel="fruitShadowImg">
+                                        <rect key="frame" x="790" y="22" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cactus_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="5IA-TQ-dly" userLabel="orangeShadowImg">
+                                        <rect key="frame" x="795" y="314" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gj" translatesAutoresizingMaskIntoConstraints="NO" id="DCi-Fh-OJJ">
+                                        <rect key="frame" x="309" y="67" width="256" height="262"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98039215800000001" green="0.89019608500000003" blue="0.73333334920000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egy-7r-5aZ">
+                                <rect key="frame" x="399" y="547" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button-back"/>
+                                <connections>
+                                    <action selector="didTapHome:" destination="4J2-Rw-ote" eventType="touchUpInside" id="CYJ-jd-lte"/>
+                                    <action selector="didTapHome:" destination="6Uv-HQ-58Q" eventType="touchUpInside" id="n3R-lb-MU7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EuO-C9-d7Y"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.89019607840000003" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="avocadoImg" destination="r1M-sd-Rkv" id="Qgb-1E-3FI"/>
+                        <outlet property="avocadoShadowImg" destination="riE-0o-c4y" id="e9e-Oe-aBI"/>
+                        <outlet property="backButton" destination="Egy-7r-5aZ" id="yHP-nw-eeg"/>
+                        <outlet property="berryImg" destination="LeZ-af-vUF" id="SYa-Lh-wvT"/>
+                        <outlet property="berryShadowImg" destination="5IA-TQ-dly" id="AYw-LV-5yv"/>
+                        <outlet property="fruitImg" destination="sS5-i5-lLM" id="3lW-Ct-eTF"/>
+                        <outlet property="fruitShadowImg" destination="elC-hh-rfy" id="WzS-Lx-qHJ"/>
+                        <outlet property="greatJobImg" destination="DCi-Fh-OJJ" id="T8J-eR-59q"/>
+                        <outlet property="orangeImg" destination="Q1V-qF-Cmy" id="sBA-ep-3fO"/>
+                        <outlet property="orangeShadowImg" destination="tcG-qJ-f1B" id="gcE-E6-1im"/>
+                        <outlet property="wrapperView" destination="Kc5-IG-IGg" id="h8t-xn-JlM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="veN-Fr-WpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="5221"/>
+        </scene>
+        <!--Vehicles View Controller-->
+        <scene sceneID="3qa-js-0re">
+            <objects>
+                <viewController storyboardIdentifier="VehiclesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="02q-yc-zrc" customClass="VehiclesViewController" customModule="PuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lIj-4y-vdM"/>
+                        <viewControllerLayoutGuide type="bottom" id="t0s-nT-GOb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KXW-v0-mS8" userLabel="wrapperView">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ambulance_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="rGi-ss-0Jh" userLabel="chickenShadow">
+                                <rect key="frame" x="773" y="21" width="71" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="taxi_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="YZt-58-ZYy" userLabel="crocodileShadow">
+                                <rect key="frame" x="768" y="122" width="78" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="taxii" translatesAutoresizingMaskIntoConstraints="NO" id="Wet-3v-1zO" userLabel="chickenImg">
+                                <rect key="frame" x="85" y="143" width="71" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="scooter" translatesAutoresizingMaskIntoConstraints="NO" id="3nf-ES-aRK" userLabel="crocodileImg">
+                                <rect key="frame" x="82" y="246" width="76" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.94999998807907104" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ambulancee" translatesAutoresizingMaskIntoConstraints="NO" id="aZh-HE-gQ7" userLabel="kualaImg">
+                                <rect key="frame" x="71" y="21" width="110" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bicycle" translatesAutoresizingMaskIntoConstraints="NO" id="FR6-zr-qAC" userLabel="raccoonImg">
+                                <rect key="frame" x="80" y="337" width="78" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scooter_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="wg7-2g-OvG" userLabel="kualaShadow">
+                                <rect key="frame" x="758" y="234" width="100" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bicycle_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="NDx-9L-cj1" userLabel="raccoonShadow">
+                                <rect key="frame" x="762" y="322" width="78" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gj" translatesAutoresizingMaskIntoConstraints="NO" id="wuf-K7-jp5">
+                                <rect key="frame" x="320" y="76" width="256" height="262"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYp-3J-bWo">
+                                <rect key="frame" x="362" y="583" width="66" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="button-back"/>
+                                <connections>
+                                    <action selector="didTapHome:" destination="02q-yc-zrc" eventType="touchUpInside" id="Vzv-Gm-y9M"/>
+                                    <action selector="didTapHome:" destination="6Uv-HQ-58Q" eventType="touchUpInside" id="dJ9-mu-N02"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gka-YU-WKu"/>
+                        <color key="backgroundColor" red="0.96470588450000005" green="0.77647060160000003" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="rYp-3J-bWo" id="5BI-qM-hJz"/>
+                        <outlet property="chicken" destination="Wet-3v-1zO" id="NV8-qZ-vmY"/>
+                        <outlet property="chickenShadow" destination="YZt-58-ZYy" id="dYx-FV-vPt"/>
+                        <outlet property="crocodile" destination="3nf-ES-aRK" id="Gur-r4-RYI"/>
+                        <outlet property="crocodileShadow" destination="wg7-2g-OvG" id="gEh-gT-P0E"/>
+                        <outlet property="cuala" destination="aZh-HE-gQ7" id="5dd-hC-rrh"/>
+                        <outlet property="cualaShadow" destination="rGi-ss-0Jh" id="H4b-z3-jrw"/>
+                        <outlet property="greatJobImg" destination="wuf-K7-jp5" id="JUf-Ut-7Df"/>
+                        <outlet property="raccoon" destination="FR6-zr-qAC" id="UgC-P6-Xcj"/>
+                        <outlet property="raccoonShadow" destination="NDx-9L-cj1" id="6y3-aO-Ekf"/>
+                        <outlet property="wrapperView" destination="KXW-v0-mS8" id="8eS-qu-e7H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wME-bu-vzM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="2855"/>
+        </scene>
+        <!--Choice View Controller-->
+        <scene sceneID="O71-dg-9y7">
+            <objects>
+                <viewController storyboardIdentifier="ChoiceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6tG-mS-Hv4" customClass="ChoiceViewController" customModule="PuzzleGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cRP-uP-DnE"/>
+                        <viewControllerLayoutGuide type="bottom" id="duN-xK-KQP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZhX-ZD-Qys">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6WW-BE-QIj">
+                                <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Z52-de-ZIy">
+                                        <rect key="frame" x="0.0" y="0.0" width="932" height="215"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAm-Tk-bpY">
+                                                <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circleShadow" translatesAutoresizingMaskIntoConstraints="NO" id="sPD-LN-1qc">
+                                                        <rect key="frame" x="74.666666666666671" y="33.666666666666671" width="161.33333333333331" height="147.66666666666663"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="sPD-LN-1qc" secondAttribute="height" multiplier="35:32" id="qKU-vJ-wVN"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0u-Rs-6tP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <connections>
+                                                            <action selector="didTapShape:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="4ra-Fi-sRU"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0044523999090000004" green="0.79986411329999996" blue="0.47765422499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="sPD-LN-1qc" firstAttribute="centerX" secondItem="MAm-Tk-bpY" secondAttribute="centerX" id="06R-cV-jZG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="B0u-Rs-6tP" secondAttribute="trailing" id="2Nf-bt-lvT"/>
+                                                    <constraint firstAttribute="bottom" secondItem="B0u-Rs-6tP" secondAttribute="bottom" id="5EI-vu-DKz"/>
+                                                    <constraint firstItem="sPD-LN-1qc" firstAttribute="centerY" secondItem="MAm-Tk-bpY" secondAttribute="centerY" id="8jP-ch-xpa"/>
+                                                    <constraint firstItem="B0u-Rs-6tP" firstAttribute="leading" secondItem="MAm-Tk-bpY" secondAttribute="leading" id="Acv-RC-EOZ"/>
+                                                    <constraint firstItem="B0u-Rs-6tP" firstAttribute="top" secondItem="MAm-Tk-bpY" secondAttribute="top" id="va0-vC-xml"/>
+                                                    <constraint firstItem="sPD-LN-1qc" firstAttribute="width" secondItem="MAm-Tk-bpY" secondAttribute="height" multiplier="6:8" id="wRw-5z-jdY"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dva-zC-N4P">
+                                                <rect key="frame" x="310.66666666666663" y="0.0" width="310.66666666666663" height="215"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devil" translatesAutoresizingMaskIntoConstraints="NO" id="qKO-qu-z3N">
+                                                        <rect key="frame" x="74.666666666666643" y="33.666666666666671" width="161.33333333333337" height="147.66666666666663"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="qKO-qu-z3N" secondAttribute="height" multiplier="35:32" id="iR8-Y6-wlq"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIw-ca-cgm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <connections>
+                                                            <action selector="didTapEmoji:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="V4b-1N-wNs"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.67450980390000004" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="tIw-ca-cgm" secondAttribute="trailing" id="1mt-VO-rxe"/>
+                                                    <constraint firstItem="qKO-qu-z3N" firstAttribute="width" secondItem="Dva-zC-N4P" secondAttribute="height" multiplier="6:8" id="Q3T-4V-NZX"/>
+                                                    <constraint firstItem="tIw-ca-cgm" firstAttribute="top" secondItem="Dva-zC-N4P" secondAttribute="top" id="VtI-Ep-fZo"/>
+                                                    <constraint firstItem="tIw-ca-cgm" firstAttribute="leading" secondItem="Dva-zC-N4P" secondAttribute="leading" id="W18-7t-Cns"/>
+                                                    <constraint firstItem="qKO-qu-z3N" firstAttribute="centerY" secondItem="Dva-zC-N4P" secondAttribute="centerY" id="aNb-PE-Jh0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="tIw-ca-cgm" secondAttribute="bottom" id="dRp-ee-nlA"/>
+                                                    <constraint firstItem="qKO-qu-z3N" firstAttribute="centerX" secondItem="Dva-zC-N4P" secondAttribute="centerX" id="thj-Sr-YdD"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIP-LO-fre">
+                                                <rect key="frame" x="621.33333333333337" y="0.0" width="310.66666666666663" height="215"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cactus" translatesAutoresizingMaskIntoConstraints="NO" id="WBd-fi-284">
+                                                        <rect key="frame" x="74.666666666666643" y="33.666666666666671" width="161.33333333333337" height="147.66666666666663"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="WBd-fi-284" secondAttribute="height" multiplier="35:32" id="IeG-mX-Bhb"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKe-4A-7VP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <connections>
+                                                            <action selector="didTapPlant:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="X1u-76-FdL"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.89019607840000003" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="TKe-4A-7VP" firstAttribute="leading" secondItem="jIP-LO-fre" secondAttribute="leading" id="3NU-JT-EBG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="TKe-4A-7VP" secondAttribute="trailing" id="6kM-DU-1vV"/>
+                                                    <constraint firstItem="WBd-fi-284" firstAttribute="centerX" secondItem="jIP-LO-fre" secondAttribute="centerX" id="Bho-0K-C1C"/>
+                                                    <constraint firstItem="WBd-fi-284" firstAttribute="centerY" secondItem="jIP-LO-fre" secondAttribute="centerY" id="GGE-Md-b1R"/>
+                                                    <constraint firstItem="WBd-fi-284" firstAttribute="width" secondItem="jIP-LO-fre" secondAttribute="height" multiplier="6:8" id="Ivq-Ev-PI6"/>
+                                                    <constraint firstAttribute="bottom" secondItem="TKe-4A-7VP" secondAttribute="bottom" id="KWr-qq-xRV"/>
+                                                    <constraint firstItem="TKe-4A-7VP" firstAttribute="top" secondItem="jIP-LO-fre" secondAttribute="top" id="eEI-ye-Tgx"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kbW-pa-rw9">
+                                        <rect key="frame" x="0.0" y="215" width="932" height="215"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiy-x6-CYN">
+                                                <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Orange" translatesAutoresizingMaskIntoConstraints="NO" id="Kbb-ff-De1">
+                                                        <rect key="frame" x="74.666666666666671" y="33.666666666666657" width="161.33333333333331" height="147.66666666666666"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Kbb-ff-De1" secondAttribute="height" multiplier="35:32" id="t8e-i7-8gk"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFO-9K-a7H">
+                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <connections>
+                                                            <action selector="fruitsImageTapped:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="cIF-Gt-Rpf"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="LFO-9K-a7H" secondAttribute="trailing" id="WYe-8Q-TEd"/>
+                                                    <constraint firstItem="LFO-9K-a7H" firstAttribute="leading" secondItem="tiy-x6-CYN" secondAttribute="leading" id="aT8-KL-tz1"/>
+                                                    <constraint firstItem="Kbb-ff-De1" firstAttribute="centerX" secondItem="tiy-x6-CYN" secondAttribute="centerX" id="fXU-RW-rSX"/>
+                                                    <constraint firstItem="LFO-9K-a7H" firstAttribute="top" secondItem="tiy-x6-CYN" secondAttribute="top" id="jks-HC-QuY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="LFO-9K-a7H" secondAttribute="bottom" id="mGh-9L-o7U"/>
+                                                    <constraint firstItem="Kbb-ff-De1" firstAttribute="width" secondItem="tiy-x6-CYN" secondAttribute="height" multiplier="6:8" id="rSo-IM-Qhs"/>
+                                                    <constraint firstItem="Kbb-ff-De1" firstAttribute="centerY" secondItem="tiy-x6-CYN" secondAttribute="centerY" id="rzU-jE-1mG"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAp-3Q-dbA">
+                                                <rect key="frame" x="310.66666666666663" y="0.0" width="310.66666666666663" height="215"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Owl" translatesAutoresizingMaskIntoConstraints="NO" id="70C-iQ-rhJ">
+                                                        <rect key="frame" x="74.666666666666643" y="33.666666666666657" width="161.33333333333337" height="147.66666666666666"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="70C-iQ-rhJ" secondAttribute="height" multiplier="35:32" id="e1g-1n-7rB"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3f8-R5-QiF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <connections>
+                                                            <action selector="animalsImageTapped:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="Va2-px-xMd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="70C-iQ-rhJ" firstAttribute="width" secondItem="rAp-3Q-dbA" secondAttribute="height" multiplier="6:8" id="C1U-Yq-dLt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3f8-R5-QiF" secondAttribute="trailing" id="D2G-NA-DVJ"/>
+                                                    <constraint firstItem="70C-iQ-rhJ" firstAttribute="centerY" secondItem="rAp-3Q-dbA" secondAttribute="centerY" id="WGA-xT-2Un"/>
+                                                    <constraint firstItem="3f8-R5-QiF" firstAttribute="top" secondItem="rAp-3Q-dbA" secondAttribute="top" id="Wqs-wr-2Qo"/>
+                                                    <constraint firstItem="3f8-R5-QiF" firstAttribute="leading" secondItem="rAp-3Q-dbA" secondAttribute="leading" id="Y2r-MR-UVU"/>
+                                                    <constraint firstAttribute="bottom" secondItem="3f8-R5-QiF" secondAttribute="bottom" id="lDn-Bp-Dwg"/>
+                                                    <constraint firstItem="70C-iQ-rhJ" firstAttribute="centerX" secondItem="rAp-3Q-dbA" secondAttribute="centerX" id="yFf-vw-n9h"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olD-v4-bX6">
+                                                <rect key="frame" x="621.33333333333337" y="0.0" width="310.66666666666663" height="215"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle" translatesAutoresizingMaskIntoConstraints="NO" id="89C-cB-Dwe">
+                                                        <rect key="frame" x="74.666666666666643" y="33.666666666666657" width="161.33333333333337" height="147.66666666666666"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="89C-cB-Dwe" secondAttribute="height" multiplier="35:32" id="Znc-I8-rig"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCV-0B-dTF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="215"/>
+                                                        <connections>
+                                                            <action selector="didTapVehicle:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="MEP-6i-rK2"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.76862745099999996" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="OCV-0B-dTF" secondAttribute="bottom" id="18D-sw-Kxe"/>
+                                                    <constraint firstItem="OCV-0B-dTF" firstAttribute="leading" secondItem="olD-v4-bX6" secondAttribute="leading" id="2rz-d3-1Hh"/>
+                                                    <constraint firstItem="OCV-0B-dTF" firstAttribute="top" secondItem="olD-v4-bX6" secondAttribute="top" id="3KI-dg-PPj"/>
+                                                    <constraint firstItem="89C-cB-Dwe" firstAttribute="width" secondItem="olD-v4-bX6" secondAttribute="height" multiplier="6:8" id="58s-QG-bBF"/>
+                                                    <constraint firstItem="89C-cB-Dwe" firstAttribute="centerX" secondItem="olD-v4-bX6" secondAttribute="centerX" id="Jd7-Io-fen"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OCV-0B-dTF" secondAttribute="trailing" id="ofs-aP-9h7"/>
+                                                    <constraint firstItem="89C-cB-Dwe" firstAttribute="centerY" secondItem="olD-v4-bX6" secondAttribute="centerY" id="vBt-p3-iUK"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6n-p6-waY">
+                                <rect key="frame" x="29.999999999999996" y="29.999999999999996" width="61.666666666666657" height="61.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61.670000000000002" id="Udv-yf-J2f">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="y6n-p6-waY" secondAttribute="height" multiplier="1:1" id="XJy-TF-3mR"/>
+                                    <constraint firstAttribute="width" secondItem="y6n-p6-waY" secondAttribute="height" multiplier="1:1" id="sBl-Be-AfH"/>
+                                </constraints>
+                                <state key="normal" image="button-back"/>
+                                <connections>
+                                    <action selector="didTapHome:" destination="6tG-mS-Hv4" eventType="touchUpInside" id="pTh-NK-GMf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OH7-09-LCF"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y6n-p6-waY" firstAttribute="leading" secondItem="ZhX-ZD-Qys" secondAttribute="leading" constant="30" id="9IC-jR-lds"/>
+                            <constraint firstItem="6WW-BE-QIj" firstAttribute="leading" secondItem="ZhX-ZD-Qys" secondAttribute="leading" id="BFA-5H-VdH"/>
+                            <constraint firstAttribute="bottom" secondItem="6WW-BE-QIj" secondAttribute="bottom" id="FAV-Xt-lwI"/>
+                            <constraint firstItem="6WW-BE-QIj" firstAttribute="top" secondItem="ZhX-ZD-Qys" secondAttribute="top" id="Svf-jX-rkx"/>
+                            <constraint firstItem="y6n-p6-waY" firstAttribute="top" secondItem="cRP-uP-DnE" secondAttribute="bottom" constant="30" id="b2K-Ko-Tvo"/>
+                            <constraint firstAttribute="trailing" secondItem="6WW-BE-QIj" secondAttribute="trailing" id="c5A-gC-CnQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKi-Fy-6aT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="2855"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Carrot" width="512" height="512"/>
+        <image name="Cherry" width="512" height="512"/>
+        <image name="Monkey" width="512" height="512"/>
+        <image name="Orange" width="512" height="512"/>
+        <image name="Owl" width="512" height="512"/>
+        <image name="OwlShadow" width="688" height="706"/>
+        <image name="Penguin" width="512" height="512"/>
+        <image name="PenguinShadow" width="667" height="731"/>
+        <image name="Pineapple" width="512" height="512"/>
+        <image name="Rabbit" width="512" height="512"/>
+        <image name="ambulance_shadow" width="624" height="389"/>
+        <image name="ambulancee" width="624" height="389"/>
+        <image name="bicycle" width="575" height="365"/>
+        <image name="bicycle_shadow" width="575" height="365"/>
+        <image name="button-back" width="678" height="678"/>
+        <image name="cactus" width="518" height="558"/>
+        <image name="cactus_shadow" width="517" height="558"/>
+        <image name="carrotShadow" width="572" height="588"/>
+        <image name="cherryShadow" width="507" height="577"/>
+        <image name="circleA" width="553" height="537"/>
+        <image name="circleShadow" width="553" height="537"/>
+        <image name="devil" width="526" height="526"/>
+        <image name="devilShadow" width="526" height="526"/>
+        <image name="flower" width="558" height="558"/>
+        <image name="flower_shadow" width="558" height="558"/>
+        <image name="fruitMainBG" width="1811" height="769"/>
+        <image name="gj" width="544" height="438"/>
+        <image name="heartA" width="526" height="455"/>
+        <image name="heartShadow" width="526" height="455"/>
+        <image name="monkeyShadow" width="414" height="536"/>
+        <image name="musicGame" width="1008" height="1071"/>
+        <image name="orangeShadow" width="505" height="536"/>
+        <image name="pineapple4Shadow" width="300" height="536"/>
+        <image name="plant" width="444" height="558"/>
+        <image name="plant_shadow" width="444" height="558"/>
+        <image name="ploygonShadow" width="465" height="441"/>
+        <image name="polygon" width="465" height="441"/>
+        <image name="poop" width="500" height="526"/>
+        <image name="poopShadow" width="500" height="526"/>
+        <image name="rebbitShadow" width="652" height="766"/>
+        <image name="rose" width="526" height="526"/>
+        <image name="rose_shadow" width="526" height="526"/>
+        <image name="scooter" width="544" height="481"/>
+        <image name="scooter_shadow" width="544" height="480"/>
+        <image name="squareA" width="354" height="354"/>
+        <image name="squareShadow" width="374" height="374"/>
+        <image name="starShadow" width="526" height="510"/>
+        <image name="starr" width="526" height="510"/>
+        <image name="taxi_shadow" width="623" height="332"/>
+        <image name="taxii" width="623" height="332"/>
+        <image name="triangleA" width="389" height="361"/>
+        <image name="triangleShaow" width="389" height="361"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
