@@ -8,22 +8,10 @@
 
 import UIKit
 import SpriteKit
-import StoreKit
-
-var ifAlreadyAskedReview =  false
-var defaults = UserDefaults.standard
 
 class PuzzleGameViewController: UIViewController {
 
     var screenName = ""
-    
-    fileprivate func rating() {
-        if !ifAlreadyAskedReview {
-            //Request review
-            SKStoreReviewController.requestReview()
-            ifAlreadyAskedReview = true
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,9 +39,6 @@ class PuzzleGameViewController: UIViewController {
         }
         SoundManager.shared.addHapticFeedbackWithStyle(style: .medium)
         SoundManager.shared.playOnlyOnce(sound: .Tap)
-        
-        // Ask to rate App
-        self.rating()
     }
 
     override var shouldAutorotate: Bool {
